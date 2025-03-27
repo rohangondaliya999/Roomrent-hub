@@ -1,0 +1,39 @@
+<!-- UPI Page 2 html Start -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="upi2.css">
+    <title>upi-payment</title>
+</head>
+<body>
+    <div class="container">
+        <form action="">
+            <h1>PAYMENT</h1>
+            
+            <div class="inputBox">
+                <span>upi id</span>
+                <input type="text" maxlength="14"  class="upi-id-number">
+            </div>
+            <div class="inputBox">
+                <span>Amount</span>
+                <input type="text"  maxlength="14" class="upi-id-number" value="Rs 149" disabled>
+            </div>
+            <!-- <input type="submit" value="Proceed" class="Proceed-btn"> -->
+            <button  onclick="pop()" class="Proceed-btn"><a href="PostAd.html">Submit</a></button>
+        </form>
+
+    </div>
+    <script>
+        function pop(){
+        alert("Payment Successfull");
+        open ("PostAd.html");
+    }
+    </script>
+</body>
+</html>
+
+<!-- UPI Page 2 html End -->

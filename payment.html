@@ -1,0 +1,71 @@
+<!-- Payment Page 2 html Start -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="payment.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <title>Payment - QR Code</title>
+</head>
+<body>
+    <div class="container">
+        <div class="payment-box">
+            <h1>Scan & Pay</h1>
+            <div class="amount-display">
+                <span class="amount-label">Amount to Pay:</span>
+                <span class="amount-value">₹5,000</span>
+            </div>
+            
+            <div class="qr-section">
+                <div class="qr-code">
+                    <img src="./assest/qr-code.png" alt="Payment QR Code">
+                </div>
+                <div class="scan-animation">
+                    <div class="scan-line"></div>
+                </div>
+            </div>
+
+            <div class="payment-instructions">
+                <h3><i class="fas fa-info-circle"></i> How to Pay</h3>
+                <ol>
+                    <li>Open your UPI payment app</li>
+                    <li>Click on "Scan QR"</li>
+                    <li>Point your camera at the QR code</li>
+                    <li>Verify the amount and complete the payment</li>
+                </ol>
+            </div>
+
+            <div class="payment-status" id="paymentStatus">
+                <div class="status-icon">
+                    <i class="fas fa-spinner fa-spin"></i>
+                </div>
+                <p>Waiting for payment...</p>
+            </div>
+
+            <button onclick="simulatePayment()" class="confirm-btn">I have made the payment</button>
+        </div>
+    </div>
+
+    <script>
+        function simulatePayment() {
+            const statusDiv = document.getElementById('paymentStatus');
+            statusDiv.innerHTML = `
+                <div class="status-icon success">
+                    <i class="fas fa-check-circle"></i>
+                </div>
+                <p>Payment Successful!</p>
+            `;
+            setTimeout(() => {
+                alert("Payment Successful!");
+                window.location.href = "full-details.html";
+            }, 1500);
+        }
+    </script>
+</body>
+
+</html>
+
+<!-- Payment Page 2  html End -->

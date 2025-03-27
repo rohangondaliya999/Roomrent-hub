@@ -1,0 +1,121 @@
+/* Payment page 2 CSS Start */
+
+*{
+  font-family: 'gilroy',sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  outline: none;
+  border: none;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+.container{
+  min-height: 100vh;
+  background: #eee;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-flow: column;
+  padding-bottom: 60px;
+}
+h1{
+  text-align: center;
+}
+.container form{
+  background: #fff;
+  border-radius: 5px;
+  box-shadow: 0 10px 15px rgba(0,0,0,.1);
+  padding: 20px;
+  width: 600px;
+  
+}
+.container form .inputBox{
+  margin-top: 20px;
+}
+.container form .container span{
+  display: block;
+  color: #999;
+  padding-bottom: 5px;
+}
+.container form .inputBox input,
+.container form .inputBox select{
+  width: 100%;
+  padding: 10px;
+  border-radius: 10px;
+  border: 1px solid rgba(0,0,0,.3);
+  color: #444;
+}
+.container form .flaxbox{
+  display: flex;
+  gap: 15px;
+}
+.container form .flaxbox .inputBox{
+  flex:1 1 150px;
+}
+.container form .Proceed-btn{
+  width: 100%;
+  background: linear-gradient(45deg,blueviolet,deeppink);
+  margin-top: 20px;
+  padding: 10px;
+  font-size: 20px;
+  color: #fff;
+  cursor: pointer;
+  transition: .2s linear;
+}
+button {
+  padding: 12px;
+  background-color: darkgray;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color:green;
+}
+
+.payment-options {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.payment-options button {
+  padding: 12px 20px;
+  margin: 0 10px;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.payment-options button#card-payment {
+  background-color: #007bff;
+  color: #fff;
+}
+
+.payment-options button#upi-payment {
+  background-color: #28a745;
+  color: #fff;
+}
+
+
+
+.payment-options button:focus {
+  outline: none;
+}
+
+.upi{
+text-decoration: none;
+color: white;
+}
+.Proceed-btn a{
+text-decoration: none;
+color: white;
+}
+
+/* Payment page 2  CSS End */

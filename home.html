@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rent Space - Find Your Perfect Home</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="home.css">
+</head>
+<body>
+    <!-- Modern Navbar -->
+    <nav class="navbar">
+        <div class="logo">
+            <img src="./assest/Rent Space1.png" alt="Rent Space Logo">
+        </div>
+        <ul class="nav-links">
+            <li><a class="active" href="#"><i class="fas fa-home"></i> Home</a></li>
+            <li><a href="about.html"><i class="fas fa-info-circle"></i> About</a></li>
+            <li><a href="services.html"><i class="fas fa-cogs"></i> Services</a></li>
+            <li><a href="contact.html"><i class="fas fa-envelope"></i> Contact</a></li>
+        </ul>
+        <div class="buttons">
+            <button id="create-post"><a href="payment2.html"><i class="fas fa-plus"></i> List Property</a></button>
+            <button id="profile"><a href="index.html"><i class="fas fa-sign-out-alt"></i> Logout</a></button>
+        </div>
+        <div class="menu-toggle">
+            <div class="bar"></div>
+            <div class="bar"></div>
+            <div class="bar"></div>
+        </div>
+    </nav>
+
+    <!-- Enhanced Hero Section -->
+    <div class="hero">
+        <div class="hero-content">
+            <h1>Find Your Perfect Space</h1>
+            <p>Discover comfortable and affordable rooms in your preferred location</p>
+        </div>
+    </div>
+
+    <!-- Room Cards Container -->
+    <div class="container">
+        <!-- Room Card Template -->
+        <div class="room-card" data-name="University Road" data-type="apartment">
+            <div class="slider">
+                <div><img src="./assest/img10.jpg" alt="Living Room"></div>
+                <div><img src="./assest/img11.jpg" alt="Bedroom"></div>
+                <div><img src="./assest/img24.jpg" alt="Kitchen"></div>
+            </div>
+            <div class="room-details">
+                <h3>Luxury Apartment in University Road</h3>
+                <div class="price">₹15,000 <span>per month</span></div>
+                <div class="room-features">
+                    <span class="feature-tag"><i class="fas fa-wifi"></i> Wi-Fi</span>
+                    <span class="feature-tag"><i class="fas fa-parking"></i> Parking</span>
+                    <span class="feature-tag"><i class="fas fa-couch"></i> Furnished</span>
+                    <span class="feature-tag"><i class="fas fa-snowflake"></i> AC</span>
+                </div>
+                <p>Modern apartment with spacious rooms, 24/7 water supply, power backup, and security.</p>
+                <div class="room-meta">
+                    <span><i class="fas fa-expand"></i> 250 sq.ft</span>
+                    <span><i class="fas fa-map-marker-alt"></i> 2.5 km from center</span>
+                </div>
+                <button class="view-more-button"><a href="payment.html">Book now</a></button>
+            </div>
+        </div>
+
+        <div class="room-card" data-name="Kalawad Road" data-type="room">
+            <div class="slider">
+                <div><img src="./assest/img4.jpg" alt="Room View"></div>
+                <div><img src="./assest/img5.jpg" alt="Bathroom"></div>
+                <div><img src="./assest/img25.jpg" alt="Balcony"></div>
+            </div>
+            <div class="room-details">
+                <h3>Cozy Single Room in Kalawad Road</h3>
+                <div class="price">₹7,500 <span>per month</span></div>
+                <div class="room-features">
+                    <span class="feature-tag"><i class="fas fa-wifi"></i> Wi-Fi</span>
+                    <span class="feature-tag"><i class="fas fa-bed"></i> Single Bed</span>
+                    <span class="feature-tag"><i class="fas fa-fan"></i> Fan</span>
+                </div>
+                <p>Well-ventilated room with attached bathroom and basic amenities.</p>
+                <div class="room-meta">
+                    <span><i class="fas fa-expand"></i> 150 sq.ft</span>
+                    <span><i class="fas fa-map-marker-alt"></i> 1.8 km from center</span>
+                </div>
+                <button class="view-more-button"><a href="payment.html">Book now</a></button>
+            </div>
+        </div>
+
+        <div class="room-card" data-name="Race Course" data-type="hostel">
+            <div class="slider">
+                <div><img src="./assest/img6.jpg" alt="Hostel Room"></div>
+                <div><img src="./assest/img7.jpg" alt="Common Area"></div>
+                <div><img src="./assest/img26.jpg" alt="Study Room"></div>
+            </div>
+            <div class="room-details">
+                <h3>Student Hostel in Race Course</h3>
+                <div class="price">₹8,000 <span>per month</span></div>
+                <div class="room-features">
+                    <span class="feature-tag"><i class="fas fa-wifi"></i> Wi-Fi</span>
+                    <span class="feature-tag"><i class="fas fa-utensils"></i> Mess</span>
+                    <span class="feature-tag"><i class="fas fa-book"></i> Study Room</span>
+                    <span class="feature-tag"><i class="fas fa-users"></i> Common Area</span>
+                </div>
+                <p>Student-friendly hostel with mess facility, study room, and recreation area.</p>
+                <div class="room-meta">
+                    <span><i class="fas fa-expand"></i> 200 sq.ft</span>
+                    <span><i class="fas fa-map-marker-alt"></i> 3.2 km from center</span>
+                </div>
+                <button class="view-more-button"><a href="payment.html">Book now</a></button>
+            </div>
+        </div>
+
+        <div class="room-card" data-name="Mavdi" data-type="pg">
+            <div class="slider">
+                <div><img src="./assest/img8.jpg" alt="PG Room"></div>
+                <div><img src="./assest/img9.jpg" alt="Kitchen Area"></div>
+                <div><img src="./assest/img27.jpg" alt="Balcony View"></div>
+            </div>
+            <div class="room-details">
+                <h3>Premium PG in Mavdi</h3>
+                <div class="price">₹9,500 <span>per month</span></div>
+                <div class="room-features">
+                    <span class="feature-tag"><i class="fas fa-wifi"></i> Wi-Fi</span>
+                    <span class="feature-tag"><i class="fas fa-utensils"></i> Food</span>
+                    <span class="feature-tag"><i class="fas fa-tshirt"></i> Laundry</span>
+                    <span class="feature-tag"><i class="fas fa-snowflake"></i> AC</span>
+                </div>
+                <p>Fully furnished PG with meals, laundry service, and housekeeping.</p>
+                <div class="room-meta">
+                    <span><i class="fas fa-expand"></i> 180 sq.ft</span>
+                    <span><i class="fas fa-map-marker-alt"></i> 1.5 km from center</span>
+                </div>
+                <button class="view-more-button"><a href="payment.html">Bokk now</a></button>
+            </div>
+        </div>
+
+        <div class="room-card" data-name="Raiya Road" data-type="apartment">
+            <div class="slider">
+                <div><img src="./assest/img14.jpg" alt="Apartment View"></div>
+                <div><img src="./assest/img15.jpg" alt="Living Room"></div>
+                <div><img src="./assest/img30.jpg" alt="Kitchen"></div>
+            </div>
+            <div class="room-details">
+                <h3>Modern 2BHK in Raiya Road</h3>
+                <div class="price">₹18,000 <span>per month</span></div>
+                <div class="room-features">
+                    <span class="feature-tag"><i class="fas fa-wifi"></i> Wi-Fi</span>
+                    <span class="feature-tag"><i class="fas fa-parking"></i> Parking</span>
+                    <span class="feature-tag"><i class="fas fa-couch"></i> Furnished</span>
+                    <span class="feature-tag"><i class="fas fa-dumbbell"></i> Gym</span>
+                </div>
+                <p>Spacious 2BHK apartment with modern amenities and society facilities.</p>
+                <div class="room-meta">
+                    <span><i class="fas fa-expand"></i> 850 sq.ft</span>
+                    <span><i class="fas fa-map-marker-alt"></i> 4.0 km from center</span>
+                </div>
+                <button class="view-more-button"><a href="payment.html">Book now</a></button>
+            </div>
+        </div>
+
+        <div class="room-card" data-name="Gondal Road" data-type="room">
+            <div class="slider">
+                <div><img src="./assest/img16.jpg" alt="Room Interior"></div>
+                <div><img src="./assest/img17.jpg" alt="Bathroom"></div>
+                <div><img src="./assest/img24.jpg" alt="Balcony"></div>
+            </div>
+            <div class="room-details">
+                <h3>Furnished Room in Gondal Road</h3>
+                <div class="price">₹8,500 <span>per month</span></div>
+                <div class="room-features">
+                    <span class="feature-tag"><i class="fas fa-wifi"></i> Wi-Fi</span>
+                    <span class="feature-tag"><i class="fas fa-couch"></i> Semi-Furnished</span>
+                    <span class="feature-tag"><i class="fas fa-water"></i> 24/7 Water</span>
+                </div>
+                <p>Well-maintained room with basic furniture and reliable utilities.</p>
+                <div class="room-meta">
+                    <span><i class="fas fa-expand"></i> 175 sq.ft</span>
+                    <span><i class="fas fa-map-marker-alt"></i> 2.8 km from center</span>
+                </div>
+                <button class="view-more-button"><a href="payment.html">Book now</a></button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Quick Contact Float Button -->
+    <div class="float-contact">
+        <button class="float-btn" onclick="toggleContactForm()">
+            <i class="fas fa-comments"></i>
+        </button>
+        <div class="quick-contact-form" id="quickContactForm">
+            <h3>Quick Enquiry</h3>
+            <input type="text" placeholder="Your Name">
+            <input type="email" placeholder="Your Email">
+            <textarea placeholder="Your Message"></textarea>
+            <button>Send Message</button>
+        </div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            // Initialize slick slider
+            $('.slider').slick({
+                dots: true,
+                arrows: true,
+                autoplay: true,
+                autoplaySpeed: 3000,
+                fade: true,
+                cssEase: 'linear'
+            });
+
+            // Mobile menu toggle
+            $('.menu-toggle').click(function() {
+                $(this).toggleClass('active');
+                $('.nav-links').toggleClass('active');
+            });
+        });
+
+        // Quick contact form toggle
+        function toggleContactForm() {
+            document.getElementById('quickContactForm').classList.toggle('active');
+        }
+    </script>
+</body>
+</html>

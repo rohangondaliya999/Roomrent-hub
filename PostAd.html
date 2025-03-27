@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Post Ad</title>
+    <link rel="stylesheet" href="PostAd.css">
+    <link rel="icon" href="https://tse4.mm.bing.net/th?id=OIP.cEwm7RnHPDcKVEcE_q7chAHaE8&pid=Api&P=0&h=180">
+    <style>
+                @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+    </style>
+</head>
+<body>
+    <!-- <h1 class="head">Post Ad</h1> -->
+    <div class="parent-container">
+        <h1 class="head">Post Ads</h1>
+      <div class="main-container">
+
+        <div class="image-main-container">
+
+            <div class="img1">
+                <div>
+                    <img src="./assest/Add image icon.png" alt="Image">
+                </div>
+                <button>Add image</button>
+            </div>
+
+            <div class="img2">
+                <div>
+                    <img src="./assest/Add image icon.png" alt="Image">
+                </div>
+                <button>Add image</button>
+            </div>
+
+            <div class="img3">
+                <div>
+                    <img src="./assest/Add image icon.png" alt="Image">
+                </div>
+                <button>Add image</button>
+            </div>
+
+        </div>
+
+      </div>
+
+      <form  >
+      <div class="form" >
+        <div class="container-form">
+            <div class="handle">
+            <h2>Room Details</h2>
+            <input id="input" type="text" placeholder="Your Name" required autocomplete="off">
+            <input id="input" type="tel" placeholder="Phone Number" required>
+            <br>
+            <input id="input" type="email" placeholder="E-Mail" required>
+            <input id="input" type=" text" placeholder="Address" required>
+            <br>
+            <!-- <textarea name="Information" id="" cols="50" rows="10" placeholder="Detailed Information About Your Rooms" required></textarea> -->
+            <input id="input" class="textarea" type="text" placeholder="Detail Information" required>
+            <br>
+            <button onclick="pop()"   class="submit" type="submit"><a href="home.html">Post</a></button>
+        </div>
+
+        </div>
+    </div>
+</form>
+
+    </div>
+    <script>
+      
+    const input = document.getElementById("input");
+const submitBtn = document.querySelector('.submit');
+
+input.addEventListener("keyup",(e)=>{
+    const value = e.currentTarget.value;
+    if(value == ""){
+        submitBtn.disabled = true;
+    }
+    else{
+        submitBtn.disabled = false;
+    }
+});
+
+        function pop(){
+        alert("Posted Successfully");
+        open ("home.html");
+    }
+    
+    </script>
+</body>
+</html>

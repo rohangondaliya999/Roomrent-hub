@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up - RentSpace</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="login.css">
+</head>
+<body>
+    <div class="container">
+        <div class="form-container signup">
+            <div class="logo">
+                <img src="./assest/Rent Space1.png" alt="RentSpace Logo">
+            </div>
+            <h1>Create Account</h1>
+            <div class="tabs">
+                <button class="tab active" data-tab="user">User</button>
+                <button class="tab" data-tab="owner">Property Owner</button>
+            </div>
+            <form id="signupForm" onsubmit="return validateSignupForm()">
+                <div class="input-group">
+                    <i class="fas fa-user"></i>
+                    <input type="text" id="fullname" placeholder="Full Name" required>
+                </div>
+                <div class="input-group">
+                    <i class="fas fa-envelope"></i>
+                    <input type="email" id="email" placeholder="Email Address" required>
+                </div>
+                <div class="input-group">
+                    <i class="fas fa-phone"></i>
+                    <input type="tel" id="phone" placeholder="Phone Number" required>
+                </div>
+                <div class="input-group">
+                    <i class="fas fa-lock"></i>
+                    <input type="password" id="password" placeholder="Password" required>
+                    <i class="fas fa-eye-slash toggle-password"></i>
+                </div>
+                <div class="input-group">
+                    <i class="fas fa-lock"></i>
+                    <input type="password" id="confirm_password" placeholder="Confirm Password" required>
+                </div>
+                <div class="terms">
+                    <label>
+                        <input type="checkbox" id="terms" required>
+                        I agree to the <a href="#">Terms of Service</a> and <a href="#">Privacy Policy</a>
+                    </label>
+                </div>
+                <button type="submit" class="login-btn">Create Account</button>
+                <div class="divider">
+                    <span>or sign up with</span>
+                </div>
+                <div class="social-login">
+                    <button type="button" class="google-btn">
+                        <img src="./assest/google.png" alt="Google">
+                        Google
+                    </button>
+                </div>
+                <p class="signup-link">
+                    Already have an account? <a href="login.html">Login</a>
+                </p>
+            </form>
+        </div>
+    </div>
+
+    <script>
+        // Toggle password visibility
+        document.querySelectorAll('.toggle-password').forEach(toggle => {
+            toggle.addEventListener('click', function() {
+                const passwordInput = this.previousElementSibling;
+                const icon = this;
+                
+                if (passwordInput.type === 'password') {
+                    passwordInput.type = 'text';
+                    icon.classList.remove('fa-eye-slash');
+                    icon.classList.add('fa-eye');
+                } else {
+                    passwordInput.type = 'password';
+                    icon.classList.remove('fa-eye');
+                    icon.classList.add('fa-eye-slash');
+                }
+            });
+        });
+
+        // Tab switching
+        document.querySelectorAll('.tab').forEach(tab => {
+            tab.addEventListener('click', () => {
+                document.querySelectorAll('.tab').forEach(t => t.classList.remove('active'));
+                tab.classList.add('active');
+            });
+        });
+
+        // Form validation
+        function validateSignupForm() {
+            const fullname = document.getElementById('fullname').value;
+            const email = document.getElementById('email').value;
+            const phone = document.getElementById('phone').value;
+            const password = document.getElementById('password').value;
+            const confirm_password = document.getElementById('confirm_password').value;
+            const terms = document.getElementById('terms').checked;
+
+            // Name validation
+            if (fullname.length < 3) {
+                alert('Name must be at least 3 characters long');
+                return false;
+            }
+
+            // Email validation
+            const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            if (!emailRegex.test(email)) {
+                alert('Please enter a valid email address');
+                return false;
+            }
+
+            // Phone validation
+            const phoneRegex = /^\d{10}$/;
+            if (!phoneRegex.test(phone)) {
+                alert('Please enter a valid 10-digit phone number');
+                return false;
+            }
+
+            // Password validation
+            if (password.length < 6) {
+                alert('Password must be at least 6 characters long');
+                return false;
+            }
+
+            if (password !== confirm_password) {
+                alert('Passwords do not match');
+                return false;
+            }
+
+            // Terms validation
+            if (!terms) {
+                alert('Please accept the Terms of Service and Privacy Policy');
+                return false;
+            }
+
+            // If validation passes, redirect to home page
+            window.location.href = 'home.html';
+            return false; // Prevent form submission
+        }
+    </script>
+</body>
+</html> 
